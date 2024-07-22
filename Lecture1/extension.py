@@ -2,10 +2,13 @@ import os
 
 file_name = input("File name: ")
 
+# Apply case and space insensitivity
+file_name = file_name.strip().lower()
+
 # Get the extension from the file 
 extention = os.path.splitext(file_name)[1]
 
-print(extention)
+#print(extention)
 
 # match suffix (extension) of file name 
 match extention:
@@ -16,12 +19,12 @@ match extention:
     case ".jpeg":
         print("image/jpeg")
     case ".png":
-        print("")
+        print("image/png")
     case ".pdf":
-        print("")
+        print("application/pdf")
     case ".txt":
-        print("")
+        print("text/plain")
     case ".zip":
-        print("")
+        print("application/zip")
     case _:
         print("application/octet-stream")

@@ -18,5 +18,5 @@ camel = input("camelCase: ")
 # Call function 
 snake_case = snake_case_converter(camel)
 
-print(snake_case)
+print(f"snake_case: {snake_case}")
 

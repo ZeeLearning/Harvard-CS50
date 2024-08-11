@@ -41,10 +41,8 @@ def main():
     else:
         print(f"{percentage}%")
 
-# main()
+main()
 
-if __name__ == "__main__":
-    main()
 
 
 

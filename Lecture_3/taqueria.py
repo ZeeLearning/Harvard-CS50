@@ -16,11 +16,11 @@ total = 0
 
 try:
     while True:
-        item = input("Item: "  )
+        item = input("Item: "  ).strip().title()
         if not item in menu:
             continue
         total = total + menu[item]
-        print(f"Total: ${format(total, ".2f")}")
+        print(f"Total: ${format(total, '.2')}")
 
 # KeyError exception 
 except KeyError:

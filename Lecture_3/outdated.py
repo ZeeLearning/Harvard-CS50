@@ -32,7 +32,7 @@ def convert_date(d):
         pass 
 
 while True:
-    user_date = input("Date: ")
+    user_date = input("Date: ").strip()
     # Call function convert_date(d)
     formatted_date = convert_date(user_date)
 

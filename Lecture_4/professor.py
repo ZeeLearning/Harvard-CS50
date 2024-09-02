@@ -27,7 +27,7 @@ def main():
             if attempts == 3:
                 print(f"{x} + {y} = {correct_answer}")
 
-    print(f"Score = {score}/10")
+    print(f"Score = {score}")
 
 def get_level():
     while True:

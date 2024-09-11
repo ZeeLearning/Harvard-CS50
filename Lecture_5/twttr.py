@@ -8,6 +8,7 @@ def main():
 def shorten(word):
     # List of Vowels
     vowels = ['A','E','I','O','U','a','e','i','o','u']
+    #vowels = ['A','E','I','O','U']
     # Define an empty string 
     output_text = ""
 

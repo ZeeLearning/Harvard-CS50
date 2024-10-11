@@ -2,10 +2,8 @@ import re
 import sys
 
 def main():
-    try:
-        print(convert(input("Hours: ")))
-    except ValueError as e:
-        print(e)
+     
+     print(convert(input("Hours: ")))
 
 def convert(s):
     # Define the regular expression pattern to match valid formats
@@ -14,7 +12,7 @@ def convert(s):
     
     if not match:
         # If the input doesn't match any of the expected formats, raise a ValueError
-        raise ValueError("Invalid input format")
+        raise ValueError
     
     # Extract the components of the start time and end time
     start_hour, start_minute, start_period, end_hour, end_minute, end_period = match.groups()
@@ -31,9 +29,9 @@ def convert(s):
     
     # Validate the hour and minute values
     if not (1 <= start_hour <= 12 and 0 <= start_minute < 60):
-        raise ValueError("Invalid start time")
+        raise ValueError
     if not (1 <= end_hour <= 12 and 0 <= end_minute < 60):
-        raise ValueError("Invalid end time")
+        raise ValueError
     
     # Convert start time to 24-hour format
     start_24 = to_24_hour_format(start_hour, start_minute, start_period)

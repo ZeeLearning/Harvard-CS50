@@ -14,7 +14,7 @@ def main():
         sys.exit("Invalid date")
 
     minutes = calculate_song_minutes(dob_date)  # Calculate minutes using song logic
-    print(f"{p.number_to_words(minutes, andword='').replace('-', ' ')} minutes")
+    print(f"{p.number_to_words(minutes, andword='')} minutes")
 
 
 def parse_date(dob):

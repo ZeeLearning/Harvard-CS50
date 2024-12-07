@@ -13,8 +13,11 @@ def main():
     except ValueError:
         sys.exit("Invalid date")
 
-    minutes = calculate_song_minutes(dob_date)  # Calculate minutes using song logic
-    print(f"{p.number_to_words(minutes, andword='')} minutes")
+    minutes = calculate_total_minutes(dob_date)  # Calculate total minutes accurately
+    # Convert number to words and capitalize only the first word
+    words = p.number_to_words(minutes, andword="")
+    words = words[0].upper() + words[1:]  # Capitalize the first letter
+    print(f"{words} minutes")
 
 
 def parse_date(dob):
@@ -23,26 +26,14 @@ def parse_date(dob):
     return date(year, month, day)
 
 
-def calculate_song_minutes(dob):
+def calculate_total_minutes(dob):
     """
-    Calculates the total minutes since the date of birth,
-    assuming 525,600 minutes per year (ignoring leap years).
+    Calculates the total minutes from the date of birth to today,
+    considering leap years.
     """
     today = date.today()
-    if dob.year == today.year:  # If born in the current year, no full year has passed
-        return 0
-
-    years_diff = today.year - dob.year
-
-    # Check if today's date has passed the birthdate in the current year
-    if (today.month, today.day) < (dob.month, dob.day):
-        years_diff -= 1
-
-    # If exactly one year has passed
-    if years_diff == 1:
-        return 525600
-
-    return years_diff * 525600  # Total minutes
+    days_difference = (today - dob).days  # Get total days difference
+    return days_difference * 1440  # Convert days to minutes (1440 minutes in a day)
 
 
 if __name__ == "__main__":

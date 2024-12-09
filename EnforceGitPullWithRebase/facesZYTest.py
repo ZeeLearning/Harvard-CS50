@@ -5,6 +5,8 @@ def convert(text):
     # Replace ":(" with 🙁
     text = text.replace(":(", "🙁")
 
+    text = text.replace("happy", "🙂")
+
     return text 
 
 def main():

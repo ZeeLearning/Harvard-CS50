@@ -8,6 +8,7 @@ def convert(text):
     # Replace sad with 🙁
     text = text.replace("sad", "🙁")
 
+    # Replace happy with 🙂
     text = text.replace("happy", "🙂")
 
     return text 

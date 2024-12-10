@@ -9,3 +9,6 @@ energy = int(mass * pow(sol, 2))
 # Print the result
 print(f"E: {energy}")
 
+# Print the value of PI 
+print(f"PI: 3.14")
+

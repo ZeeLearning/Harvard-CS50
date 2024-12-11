@@ -11,6 +11,9 @@ def convert(text):
     # Replace happy with 🙂
     text = text.replace("happy", "🙂")
 
+    # Replace angry with 😡
+    text = text.replace("angry", "😡")
+
     return text 
 
 def main():
